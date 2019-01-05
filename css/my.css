@@ -1,0 +1,272 @@
+html { 
+  background: url(../images/comp.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Helvatica Neue', sans-serif;
+  
+     
+}
+/*body {
+margin:0;
+padding:0;
+width:100%;  take full browser width 
+     height:100%;
+     min-width: 50px;
+     min-height: 50px;
+}*/
+
+.center-box {
+	width: 400px;
+	height: 450px;
+	background: rgba(0,0,0,0.4);
+	padding: 40px;
+	color: white;
+	margin: 0 auto;
+	margin-top: 100px; 
+	text-align: center;
+
+}
+
+.pict {
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+}
+
+.center-box h1 {
+	font-weight: 100;
+	letter-spacing: 10;
+	font-size: 40px;
+}
+
+.center-box h5 {
+	font-weight: 100;
+	letter-spacing: 6;
+	font-size: 17px;
+}
+
+.center-box p {
+	font-weight: 250;
+	letter-spacing: 4;
+}
+
+.social {
+	font-size: 40px;
+}
+
+.social a {
+	color: white;
+}
+
+.line-break {
+	width: 400px;
+	margin: 0 auto;
+	border-top: 1px solid white;
+}
+
+.nav {
+	width: 200px;
+	height: auto;
+	position: absolute;
+	top: 30%; 
+	left: 0; 
+
+}
+
+.nav a {
+	text-decoration: none;
+	font-size: 28px;
+	/*font-family: verdana;*/
+	/*font-weight: bold;*/
+	height: 90px;
+	margin: 5px 0;
+	float: left;
+	background-color: rgba(0,0,0,0.4);
+	color: white;
+	display: inline-block;
+	line-height: 90px;
+	text-align: center;
+	transition: 300ms;
+}
+
+
+a.active, .nav a:hover {
+	background-color: white;
+	color: black;
+	width: 100%;
+}
+
+.home {
+	width: 95%;
+}
+.about {
+	width: 80%;
+}
+.contact {
+	width: 95%;
+}
+.skill{
+	width: 60%;
+}
+
+.abt {
+	padding: 40px;
+	color: white;
+	display: none;
+	background: rgba(0,0,0,0.4);
+	height: 450px;
+	width: 400px;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 100px;
+
+}
+
+
+ .abt p {
+ 	font-size: 16px;
+ 	line-height: 28px;
+ 	font-weight: 200;
+	letter-spacing: 4;
+ }
+
+.skl{
+	background: rgba(0,0,0,0.4);
+	text-align: center;
+	margin: 0 auto;
+	height: 450px;
+	width: 400px;
+	margin-top: 100px;
+	padding: 40px;
+	color: white;
+	display: none;	
+}
+
+.cntct {
+	width: 470px;
+	height: 450px;
+	background: none;
+	padding: 40px;
+	color: white;
+	margin: 0 auto;
+	margin-top: 100px; 
+	text-align: center;
+	display: none;
+	outline: none;
+	
+}
+.opp {
+	color: black;
+	text-align: left;
+}
+#form1{
+	outline: none;
+	width: 400px;
+	margin: 0 auto;
+	text-align: center;
+	list-style: none;
+}
+.inputtext {
+	width: 70%;
+	height: 50px;
+	border: 1px solid white;
+	color: white;
+	background-color: rgba(0,0,0,0.4);
+	font-size: 16px;
+	padding: 0 10px;
+	float: left;
+	margin-bottom: 15px;
+}
+.inputmessage {
+	width: 70%;
+	height: 130px;
+	border: 1px solid white;
+	color: white;
+	background-color: rgba(0,0,0,0.4);
+	font-size: 16px;
+	padding: 0 10px;
+	float: left;
+}
+.submitbutton {
+	width: 150px;
+	height: 55px;
+	background-color: white;
+	color: black;
+	font-size: 18px;
+	border: none;
+	float: left;
+	clear: both;
+	margin-top: 25px;
+}
+
+.holepage {
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+@media screen and (max-width:899px){
+	.holepage{
+		width: 40%;
+	}
+	.nav{
+		width: 30%;
+		height: 30%;
+	}
+	.nav a{
+		font-size: 20px;
+	}
+
+}
+
+.error{
+	color: red;
+	font-weight: bold;
+	font-size: 14px;
+	width: 120px;
+	text-align: right;
+	margin-left: 15px;
+	display: inline-block;
+}
+.cntct span{
+	float: left;
+	margin-right: 0;
+  	width: 60px;	
+}
+
+/* Make sure that padding behaves as expected */
+* {
+	/*box-sizing:*/
+	border-box
+height: 30px;}
+
+/* Container for skill bars */
+.container {
+	/*height: 30px;*/
+  	width: 100%; /* Full width */
+  	background-color: #ddd; /* Grey background */
+}
+
+.skills {
+	
+  	text-align: right; /* Right-align text */
+  	padding: 7px; /* Add some padding */
+  	height: 10px;
+
+}
+
+.html {width: 90%; background-color: #4CAF50;} /* Green */
+.c {width: 90%; background-color: #2196F3;} /* Blue */
+.js {width: 60%; background-color: #f44336;} /* Red */
+.python {width: 70%; background-color: #808080;} /* Dark Grey */
+.cpp {width: 80%; background-color: #4CAF50;} /* Green */
+.sql {width: 70%; background-color: #2196F3;}/* Blue */
+
+
+
+
+
+
