@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/my.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- You can use open graph tags to customize link previews.
+    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+ <!--  <meta property="og:url"           content="https://www.your-domain.com/your-page.html" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Your Website Title" />
+  <meta property="og:description"   content="Your description" />
+  <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" /> -->
+  	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta content="text/html; charset=utf-8" http-equiv="content-type">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+	<div class="holepage">
+
+	<div class="nav">
+		<a class="home active" href="#">Home</a>
+		<a class="about" href="#">About Me</a>
+		<a class="skill" href="#">Skills</a>
+		<a class="contact" href="#">Contact Me</a>
+		
+	</div>
+
+	<div class="center-box"><!-- home page -->
+		<img src="images/me.jpg"  alt="Avatar" class="pict">
+		<h1>Inbal Chen</h1>
+		<h5>Software Engineer<br> Looking for my first position</h5>
+
+		<div class="line-break"></div>
+
+		<p>My passion is to learn and develop cool things</p>
+
+		<div class="social"><!-- navigate to social -->
+			<a href="https://www.facebook.com/inbal.chen.5" target="_blank"><i class="fab fa-facebook-square"></i></a>
+			<a href="https://www.linkedin.com/in/inbal-chen-318244135/" target="_blank"><i class="fab fa-linkedin-square" ></i></a>
+		</div>
+			
+	</div>
+
+	<div class="abt"><!-- about me page -->
+			<p>Hi I'm inbal<br>I live to program!!!!<br>
+				A Bachelor of Software Engineering<br>
+				<br>
+				I enjoy being challenged and engaging in projects and tasks that require me to work outside my comfort zone and knowledge.<br>I have extensive knowledge in different languages, a lot of motivation and a desire to learn new things and i would love to get a chance to prove it.<br><br>
+				Thank you for reading this!   </p>
+	</div>
+
+	<div class="skl"><!-- skills page -->
+
+		<p>JAVA</p>
+		<div class="container">
+  			<div class="skills html">90%</div>
+		</div>
+
+		<p>C</p>
+		<div class="container">
+  			<div class="skills c">90%</div>
+		</div>
+
+		<p>C++</p>
+		<div class="container">
+  			<div class="skills cpp">80%</div>
+		</div>
+
+		<p>JavaScript</p>
+		<div class="container">
+  			<div class="skills js">60%</div>
+		</div>
+
+		<p>python</p>
+		<div class="container">
+  			<div class="skills python">70%</div>
+		</div>
+
+		<p>SQL</p>
+		<div class="container">
+  			<div class="skills sql">70%</div>
+		</div>
+	</div>
+
+	<div class="cntct">	
+		<div class="opp">
+					<p>I look forward to speaking with you about some new opportunities....</p>
+			</div>
+
+			<!-- <form action="meiler.php" id="form1" method="post"> -->
+			<form action="https://formspree.io/inbalchenz@gmail.com" method="POST" id="form1" >	
+
+				<div>
+
+				<input type="text" name="name" id="fname" class="inputtext" placeholder="First Name" onFocus="this.value=''">
+				<span class="error" for="fname" style="display:inline;">Enter first name!</span>
+				</div>
+
+				<div>
+				<input type="text" name="lname" id="lname" class="inputtext" placeholder="Last Name" onFocus="this.value=''">
+				<span class="error" for="lname" style="display:inline;">Enter last name!</span>
+				</div>
+
+				<div>
+				<input type="email" name="email" id="email" class="inputtext" placeholder="Email" onFocus="this.value=''">
+				<span class="error" for="email" id="invalid_email">Invalid email!!</span>
+				</div>
+				
+				<div>
+				<textarea cols="4" rows="6" name="message" id="msg" class="inputmessage" onFocus="this.value=''" placeholder="What's on your mind.."></textarea>
+				<span class="error" for="msg">please enter message</span>
+				</div>
+
+
+				<input type="submit" class="submitbutton" id="submit" value="Send" /> 
+			<!-- name="submit"	data-rel="back" -->
+
+				
+			</form>
+
+			
+	</div>
+
+	
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		$('.error').hide();
+		$('a').click(function(){
+			//alert("i am click");
+			var selected = $(this);
+			$('a').removeClass('active');
+			$(selected).addClass('active');
+		});
+
+		$('#submit').click(function(){
+			var email = $('#email').val();
+			var fname = $('#fname').val();
+			var lname = $('#lname').val();
+			var msg = $('#msg').val();
+			var $err = $('.err');
+
+			if(email== '' && fname== '' && lname== '' && msg== ''){
+				alert("All fields must be fill!!");
+				$('.error').hide();
+				return false;
+			}
+
+			if(email== ''){
+          		$('#email').next().show();
+          		return false;
+        	}
+        	if(fname== ''){
+          		$('#fname').next().show();
+          		return false;
+        	}
+        	if(lname== ''){
+          		$('#lname').next().show();
+          		return false;
+        	}
+        	if(msg== ''){
+          		$('#msg').next().show();
+          		return false;
+        	}
+        	if(IsEmail(email)==false){
+          		$('#invalid_email').show();
+          		return false;
+        	}
+        	$("#form1").trigger("reset");
+
+		});
+    	
+		var $home = $('.home'),
+		$about = $('.about'),
+		$contact = $('.contact'),
+		$skill = $('.skill'),
+		$center_box = $('.center-box'),
+		$abt = $('.abt'),
+		$cntct = $('.cntct'),
+		$skl = $('.skl');
+
+		$home.click(function(){
+			$center_box.show();
+			$abt.hide();
+			$cntct.hide();
+			$skl.hide();
+		});
+
+		$about.click(function(){
+			$center_box.hide();
+			$abt.show();
+			$cntct.hide();
+			$skl.hide();
+		});
+		$contact.click(function(){
+			$center_box.hide();
+			$cntct.show();
+			$abt.hide();
+			$skl.hide();
+		});
+		$skill.click(function(){
+			$center_box.hide();
+			$cntct.hide();
+			$abt.hide();
+			$skl.show();
+		})
+	});
+
+	function IsEmail(email) {
+  		var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  		if(!regex.test(email)) {
+    		return false;
+  		}else{
+    		return true;
+  		}
+	}
+	
+
+</script>
+
+	<!-- like button -->
+	<p align="center"><iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Finbalchen.000webhostapp.com%2F%23&width=450&layout=standard&action=like&size=large&show_faces=true&share=false&height=80&appId" width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></p>
+
+	<!-- <div id="fb-root"></div>
+	<script>(function(d, s, id) {
+  	var js, fjs = d.getElementsByTagName(s)[0];
+  	if (d.getElementById(id)) return;
+  	js = d.createElement(s); js.id = id;
+  	js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2';
+  	fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script> -->
+
+	<div class="fb-like" data-href="https://inbalchen.000webhostapp.com/#" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="false">		
+	</div>
+
+</div>
+
+
+</body>
+</html>
+
+
+
